@@ -9,11 +9,18 @@ public class Ticket {
         this.returnPiece = returnPiece;
     }
 
-    public void print(){
+    private float total() {
         int count = 1000 * piece;
         float count2 = 2000 * returnPiece * 0.9f;
-        float total = count + count2;
-        System.out.println("您購買了，單程張數: " + piece + "\t" +
-                "來回張數: " + returnPiece + "\t" + "總金額: " + total);
+        return count + count2;
     }
+
+    public void print(){
+        System.out.println("您購買了，單程張數: " + piece + "\t" +
+                "來回張數: " + returnPiece + "\t" + "總金額: " + total());
+    }
+
+
+
+
 }
